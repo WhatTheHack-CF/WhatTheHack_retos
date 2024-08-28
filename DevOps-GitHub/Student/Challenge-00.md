@@ -21,7 +21,6 @@ Durante este desafio, utilizarás características que te permitirán programar 
 **Nota 2:** Para iniciar sesión en Azure, por favor hazlo desde una ventana de incógnito. Por ahora, solo asegúrate de que puedes iniciar sesión en Azure. No necesitas crear nada todavía. Si tienes alguna duda, avísanos.
 
 ## Descripción
-TODO: Actualizar enlace
 El refugio ya cuenta con una aplicación creada por un proveedor que desean utilizar como base para su sitio web. El proyecto actualmente lo puedes encontrar en [GitHub como una plantilla](https://github.com/codigofacilito/wth-devops). El primer paso es obtener el código fuente y crear un repositorio en GitHub para mantener una copia separada. Los cambios que realices no se mezclaran con el repositorio original.
 
 El proyecto es un proyecto de Next.js/React que utiliza MongoDB.
@@ -31,7 +30,7 @@ El proyecto es un proyecto de Next.js/React que utiliza MongoDB.
 ## Criterios de Éxito
 
 - Tienes una copia de la aplicación existente en un repositorio en tu cuenta.
-- No has creado un fork del repositorio existente.
+- **No** has creado un fork del repositorio existente. Recuerda la palabra clave: **plantilla (template)**.
 
 ## Recursos de Aprendizaje
 

@@ -43,6 +43,15 @@ El archivo Bicep requiere un parámetro llamado `namePrefix`, que debe configura
 
     Puedes utilizar otro nombre para el grupo de recursos y otra región para la ubicación. Sin embargo, se recomienda usar estos valores dado que, por ejemplo, actualmente algunas regiones de Azure presentan problemas de limitación de servicio (como East US) ocasionando que algunos recursos no puedan ser creados, en especial CosmosDB.
 
+4. Registra los proveedores necesarios para los recursos que vas a crear, ejecutando los siguientes comandos uno por uno:
+
+    ```bash
+    az provider register --namespace Microsoft.OperationalInsights
+    az provider register --namespace Microsoft.ContainerRegistry
+    az provider register --namespace Microsoft.DocumentDB
+    az provider register --namespace Microsoft.App
+    ```
+
 **Tip 2.** Debes crear un service principal, el cual es una identidad de seguridad que utilizan las aplicaciones, los servicios y las herramientas de automatización creados por el usuario para acceder a recursos específicos de Azure. Puedes hacerlo desde el [Portal de Azure](https://jiasli.github.io/azure-notes/aad/Service-Principal-portal.html) o en una Terminal de tu GitHub Codespace. A continuación, se muestran los pasos para hacerlo desde la Terminal:
 
 1. Obtén el ID de tu suscripción de Azure ingresando el siguiente comando (copia el valor devuelto y pégalo en un bloc de notas para utilizarlo en el siguiente paso):
@@ -81,6 +90,12 @@ Ahora sí, debes crear el workflow (GitHub Action) para desplegar los recursos e
 
 ### Tip adicional:
 - Si estás saturado, aquí puedes encontrar un [ejemplo del archivo](https://gist.github.com/luislogosmx/ad8c3a1d3bc6659fa445541ca2851248) que puedes usar como referencia. Te pedimos que intentes hacerlo por ti mismo antes de utilizar el ejemplo.
+
+### Notas adicionales:
+- Este archivo debe guardarse en la ruta `.github/workflows`.
+- Este achivo debe existir en la rama `main`, por lo que si estás trabajando en una rama, deberás hacer un pull-request, confirmarlo y hacer merge.
+- Para ejecutar manualmente el workflow, debes dar clic en la pestaña **Actions** de tu repositorio, luego en el menú del lado izquierdo busca un workflow llamado **Create Azure resources** (o el nombre que hayas asignado en el archivo), a continuación del lado derecho da clic en el botón **Run workflow** y da clic en el botón verde **Run workflow**. 
+- Una vez ejecutado con éxito tu workflow, accede al Portal de Azure para obtener la URL de tu aplicación. Dicha URL se encuentra en Inicio > Navegar > Grupos de recursos > pets-workshop > Busca tu recurso de tipo Aplicación contenedora > Información general > Dirección URL de la aplicación.
 
 ## Criterios de Éxito
 

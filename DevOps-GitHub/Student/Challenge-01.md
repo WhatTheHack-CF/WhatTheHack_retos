@@ -14,9 +14,13 @@ GitHub Codespaces es un entorno de desarrollo en la nube que nos ayudará a trab
 
 Durante el desarrollo (en un reto posterior), crearás recursos en Azure y configurarás tu repositorio en GitHub utilizando GitHub Actions, Azure CLI y GitHub CLI. No es necesario que crees recursos en Azure directamente desde el portal, ya que hemos preparado scripts que lo harán por ti. Solo necesitarás seguir las instrucciones y asegurarte de que todo esté correctamente configurado en tu repositorio de GitHub. Repetimos, sin embargo, que en este reto 01 de configuración NO crearás recursos de Azure, pues esto se realizará más adelante. De momento, considera esto solo como información complementaria.
 
-La aplicación utiliza una variable de entorno llamada **MONGODB_URI** con el valor **mongodb://localhost** para conectarse a la base de datos MongoDB. Puedes agregar esta variable en los settings de tu repositorio, en la sección de Codespaces, como un secreto cifrado.
+La aplicación utiliza una variable de entorno llamada **MONGODB_URI** con el valor **mongodb://localhost** para conectarse a la base de datos MongoDB. 
 
-En primer lugar, crea un Codespace a partir del repositorio que se encuentra en tu cuenta de GitHub. Una vez dentro, configúralo de acuerdo a las siguientes indicaciones:
+Por tanto, **en primer lugar** agrega este elemento en los **Settings** de tu repositorio, en la sección de **Codespaces**, como un **secreto** cifrado.
+
+A continuación, **crea un Codespace** a partir del repositorio que se encuentra **en tu cuenta de GitHub** (Importante: El Codespace debe ser creado desde TU repositorio en TU cuenta).
+
+Una vez dentro de tu Codespace, **configúralo** de acuerdo a las siguientes indicaciones:
 
 ### Pasos para configurar tu Codespace:
 
@@ -32,7 +36,7 @@ En primer lugar, crea un Codespace a partir del repositorio que se encuentra en 
 
 6. Desplázate hacia abajo y selecciona **Node.js & Mongo DB**.
 
-7. Selecciona **20 (default)** para la versión de Node.js.
+7. Selecciona **22 (default)** para la versión de Node.js.
 
 8. En la siguiente pantalla, selecciona **Azure CLI devcontainers** y **GitHub CLI devcontainers** de las características adicionales y luego selecciona **OK**.
 
@@ -46,17 +50,28 @@ En primer lugar, crea un Codespace a partir del repositorio que se encuentra en 
 
 11. Escribe **rebuild** y selecciona **Codespaces: Rebuild container**.
 
-12. Selecciona **Rebuild Container** en el cuadro de diálogo. Ahora tu contenedor se reconstruirá.
+12. Selecciona **Rebuild Container** en el cuadro de diálogo. Ahora tu contenedor se reconstruirá. No importa si eliges **Rebuild** o **Full Rebuild**, cualquiera de las dos opciones te permitirá reiniciar tu codespace con las herramientas necesarias para compilar tu aplicación.
 
     - **IMPORTANTE:** La reconstrucción del contenedor puede tardar varios minutos.
 
 
-Una vez creado el Codespace y configurados los recursos, podrás ejecutar la aplicación con el siguiente comando:
+Una vez creado el Codespace y configurados los recursos, podrás ejecutar la aplicación con los siguientes comandos:
+
+Primero:
 
 ```bash
 npm install
+```
+
+Una vez instalados los paquetes, procede a ejecutar la aplicación:
+
+```bash
 npm run dev
 ```
+
+En la pestaña **Ports** te aparecerá una dirección URL desde la cual puedes acceder a tu aplicación (clic derecho y elige la opción Abrir en Navegador).
+
+> NOTA: Si te aparece un **error 502**, en la pestaña _Ports_ haz clic derecho en el puerto 3000, elige _Stop Forwarding Port_, luego regresa a la _Terminal_, presiona `Ctrl C` para cancelar y ejecuta de nuevo el comando `npm run dev`. Debería funcionar en esta segunda ocasión.
 
 ## Criterios de Éxito
 
@@ -66,7 +81,7 @@ npm run dev
   - MongoDB
 - Has creado un secreto encriptado para MONGODB_URI
 - Eres capaz de iniciar y ver la aplicación en el entorno de desarrollo basado en la nube.
-- Todos los cambios se fusionan en 'main'.
+- Todos los cambios se fusionan en 'main' (debes confirmar los cambios y sincronizar). 
 - **No** se instalaron recursos en tu máquina.
 
 ## Recursos de Aprendizaje

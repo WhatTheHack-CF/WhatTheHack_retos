@@ -16,9 +16,9 @@ Para este desafío, crearás un nuevo componente React llamado **Hours.js** en l
 
 > **IMPORTANTE: NO** hagas commit de los archivos en la rama main. En un desafío próximo crearás un pull request. Por ello, se recomienda que primero crees una nueva rama (branch) y en ella realices la siguiente implementación:
 
-- Crea el componente Hours añadiendo un archivo llamado **Hours.js** a la carpeta components.
+- Agrega el código del componente Hours (el archivo se llama **Hours.js** en la carpeta *components*).
     - Recuerda que te podemos proveer el archivo ya listo si tienes dudas.
-- La sintaxis para importar el componente Hours en **index.js** es `import Hours from '../components/Hours';`, y se puede colocar debajo de la línea que dice `// TODO: Import Hours component`
+- La sintaxis para importar el componente Hours en **index.js** es `import Hours from '../components/Hours';`, y se puede colocar debajo de la línea que dice `// TODO: Import Hours component`.
 - La sintaxis para mostrar el componente `Hours` en **index.js** es `<Hours />`, y se puede añadir inmediatamente debajo de la línea que dice `{/* TODO: Display Hours component */}`.
 - Para los propósitos de este desafío, puedes leer el día actual desde el navegador sin tener en cuenta la zona horaria del usuario.
 
