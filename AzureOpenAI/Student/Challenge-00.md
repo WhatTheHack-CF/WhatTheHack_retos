@@ -31,15 +31,16 @@ Cada cuenta personal de GitHub incluye un plan gratuito que ofrece 120 horas nú
 
 El GitHub Codespace para este hack albergará los archivos de Jupyter Notebook, los archivos de configuración y otros archivos de datos necesarios para este desafío. 
 
+### Comencemos
 Para comenzar, sigue estos pasos:
 
 1. Inicia sesión con tu cuenta personal de GitHub. Por favor NO uses una cuenta gestionada por tu empresa.
 
-2. Accede al [repositorio de Codespace de WTH Fundamentos de Azure OpenAI](https://github.com/WhatTheHack-CF/wth-openaifundamentals) que usaremos para el hack.
+2. Accede al [repositorio de Codespace de WTH Fundamentos de Azure OpenAI](https://github.com/WhatTheHack-CF/wth-oaifundamentals) que usaremos para el hack.
 
-3. Verás que el repositorio es una plantilla. Utiliza esta plantilla para crear un repositorio en tu cuenta personal. NO Hagas fork del proyecto, crea una copia del repositorio a partir de la plantilla.
+3. Verás que el repositorio es una plantilla. Utiliza esta plantilla para crear un repositorio público en tu cuenta personal. NO Hagas fork del proyecto, crea una copia del repositorio a partir de la plantilla. Puedes colocar el nombre `wth-aoai` al repositorio y el acceso público.
 
-4. Dentro de tu nuevo repositorio, crea un Codespace seleccionando la opción "Codespaces" y luego "Crear codespace en main". 
+4. Dentro de tu nuevo repositorio, crea un Codespace seleccionando la opción "Code", luego "Codespaces" y luego "Crear codespace en main". 
 
 Tu entorno de Codespace debería cargarse en una nueva pestaña del navegador. La primera vez que creas el Codespace, tardará aproximadamente entre 3 y 5 minutos en cargarse. Este entorno ya tiene preinstaladas todas las herramientas necesarias, permitiéndote concentrarte completamente en el desarrollo.
 
