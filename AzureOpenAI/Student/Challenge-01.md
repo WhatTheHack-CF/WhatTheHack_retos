@@ -32,6 +32,10 @@ Ejecuta el siguiente Jupyter Notebook para completar las tareas de este desafío
 
 El archivo se puede encontrar en tu Codespace bajo la carpeta `/notebooks`.
 
+Para ejecutar las celdas del notebook, debes seleccionar un kernel primero. Da clic en el botón **Select Kernel** que aparece en la esquina superior derecha y elige **Python Environments...***, selecionando la versión **Python 3.12.1**.
+
+Ahora sí, ejecuta cada celda de código del notebook. En algunos casos, deberás escribir código. Utiliza los enlaces mostrados en la sección Recursos Adicionales para obtener código de ayuda.
+
 ### Secciones en este Desafío:
 1. Experimentación con Parámetros
 2. Ingeniería del Mensaje de Sistema (System Message)
