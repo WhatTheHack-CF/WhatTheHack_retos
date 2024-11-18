@@ -11,7 +11,9 @@ En este desafío, configurarás los prerrequisitos necesarios y el entorno para 
 
 - Acceso a Azure OpenAI
 - GitHub Codespaces
-- Configurar Azure OpenAI
+- Configuración de Azure OpenAI
+- Configuración del Archivo env. para Jupyter Notebooks
+- Instalación de bibliotecas de Python en el Codespace
 
 ### Acceso a Azure OpenAI
 
@@ -32,19 +34,32 @@ Cada cuenta personal de GitHub incluye un plan gratuito que ofrece 120 horas nú
 El GitHub Codespace para este hack albergará los archivos de Jupyter Notebook, los archivos de configuración y otros archivos de datos necesarios para este desafío. 
 
 ### Comencemos
-Para comenzar, sigue estos pasos:
+Para iniciar con el hack, sigue estos pasos:
 
 1. Inicia sesión con tu cuenta personal de GitHub. Por favor NO uses una cuenta gestionada por tu empresa.
 
 2. Accede al [repositorio de Codespace de WTH Fundamentos de Azure OpenAI](https://github.com/WhatTheHack-CF/wth-oaifundamentals) que usaremos para el hack.
 
-3. Verás que el repositorio es una plantilla. Utiliza esta plantilla para crear un repositorio público en tu cuenta personal. NO Hagas fork del proyecto, crea una copia del repositorio a partir de la plantilla. Puedes colocar el nombre `wth-aoai` al repositorio y el acceso público.
+3. Verás que el repositorio es una **plantilla (template)**. Utiliza esta plantilla para crear un repositorio público en tu cuenta personal. NO Hagas fork del proyecto, crea una copia del repositorio a partir de la plantilla. Puedes colocar el nombre que desees (por ejemplo, `wth-aoai`) al repositorio y en acceso utiliza `Public`.
 
 4. Dentro de tu nuevo repositorio, crea un Codespace seleccionando la opción "Code", luego "Codespaces" y luego "Crear codespace en main". 
 
 Tu entorno de Codespace debería cargarse en una nueva pestaña del navegador. La primera vez que creas el Codespace, tardará aproximadamente entre 3 y 5 minutos en cargarse. Este entorno ya tiene preinstaladas todas las herramientas necesarias, permitiéndote concentrarte completamente en el desarrollo.
 
 Cuando el Codespace termine de cargarse, deberías encontrar una instancia de Visual Studio Code ejecutándose en tu navegador con los archivos necesarios para este hackathon.
+
+#### Solución de problemas
+Si al iniciar el Codespace se queda la ventana con el mensaje **Setting up your codespace** por más de un minuto, sigue este proceso:
+
+1. Cierra la pestaña del Codespace. 
+2. Instala Visual Studio Code en tu computadora desde [aquí](https://code.visualstudio.com/) en caso de que no lo tengas instalado.
+3. En tu repositorio de GitHub creado a partir de la plantilla, da clic en Code, luego en Codespaces y en los puntos suspensivos elige la opción "Open in Visual Studio Code". 
+4. Si te aparece una ventana emergente "¿Abrir en Visual Studio Code?" da clic en el botón Abrir Visual Studio Code. Se debería abrur esta aplicación en tu equipo automáticamente. En caso de que no, abre manualmente Visual Studio Code y reintenta desde el paso 3. 
+5. Si te aparece la ventana emergente "Would you like to install GitHub Codespaces extension from GitHub" da clic en el botón "Install Extension and Open URI". Espera unos minutos a que se instale la extensión. 
+6. Si te aparece otra ventana emergente de Visual Studio Code donde la extensión de GitHub Codespaces desea iniciar sesión en GitHub, da clic en "Allow". Serás dirigido al navegador.
+7. Da clic en el botón verde "Authorize Visual Studio Code".
+8. Si te vuelve a aparecer la ventana emergente "¿Abrir en Visual Studio Code?" da clic en el botón Abrir Visual Studio Code. 
+9. Ahora sí, tu Codespace debería ser abierto en tu instancia local de Visual Studio Code donde estarás trabajando. Espera a que aparezcan los archivos de tu repositorio y estás listo para proseguir con la configuración de Azure OpenAI.
 
 ### Configuración de Azure OpenAI
 
@@ -58,7 +73,7 @@ Crea un recurso de Azure OpenAI en tu suscripción de Azure y realiza algunas co
 
 ¡Ahora estás listo para configurar y ejecutar los archivos de Jupyter Notebook, muy bien!
 
-#### Configuración del Archivo de Jupyter Notebooks
+### Configuración del Archivo env. para Jupyter Notebooks
 
 El código de los Jupyter Notebooks obtiene sus valores de configuración de variables de entorno configuradas en un archivo `.env`. Algunos de estos valores de configuración son secretos (por ejemplo, la clave para acceder a tu recurso de Azure OpenAI).
 
@@ -67,7 +82,7 @@ El código de los Jupyter Notebooks obtiene sus valores de configuración de var
 Encontrarás el archivo `.env.sample` en la raíz del codespace. 
 
 - Renombra el archivo `.env.sample` a `.env`.
-- Añade las credenciales requeridas de los recursos de Azure en el archivo `.env`.
+- Añade las credenciales requeridas del recurso de Azure OpenAI en el archivo `.env`.
 
   **SUGERENCIA:** Puedes obtener estas credenciales a través del Portal de Azure dentro de tu recurso AOAI. Haz clic en `Resource Management` > `Keys and Endpoint` desde el menú desplegable en el lado izquierdo.
 
@@ -77,6 +92,11 @@ Encontrarás el archivo `.env.sample` en la raíz del codespace.
 
 **NOTA:** También hemos proporcionado un archivo `.gitignore` que debería evitar que accidentalmente hagas un commit de tu archivo `.env` renombrado a un repositorio de Git durante este desafío.
 
+### Instalación de bibliotecas de Python en el Codespace
+
+En tu GitHub Codespace, abre una Terminal y ejecuta el siguiente comando `python3 -m pip install -r requirements.txt` a fin de comenzar el proceso de instalación de varias bibliotecas de Python que serán utilizadas en los desafíos (por ejemplo, `openai`, `scikit-learn`, `pandas`, `langchain`, etc).
+
+Este proceso demorará unos minutos.
 
 ## Criterios de Éxito
 
@@ -89,6 +109,7 @@ Para completar este desafío con éxito, deberías poder:
     - `.gitignore`
     - `requirements.txt`
 - Verificar que has creado el recurso de Azure OpenAI e implementado los 3 modelos necesarios en tu suscripción de Azure.
+- Tener las bibliotecas de Python instaladas en tu Codespace.
 
 ## Recursos de Aprendizaje
 
