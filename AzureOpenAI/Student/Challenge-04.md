@@ -4,10 +4,10 @@
 
 ## Prerrequisitos
 
+- Servicio de Azure OpenAI para Modelos de IA Generativa y Modelos de Embeddings.
 - Recurso de Azure Document Intelligence para extraer texto de datos no estructurados sin procesar.
 - Recurso de Azure AI Search para la indexación y recuperación de información relevante.
-- Servicio de Azure OpenAI para Modelos de IA Generativa y Modelos de Embeddings.
-- Añade las credenciales necesarias de los recursos anteriores en el archivo `.env`.
+- **IMPORTANTE**: Añade las credenciales necesarias de los recursos Azure AI Search y Azure Document Intelligence en el archivo `.env`.
 
 ## Introducción
 
